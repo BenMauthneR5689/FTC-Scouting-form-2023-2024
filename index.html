@@ -250,7 +250,17 @@ form {
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
-
+<script>
+function onlyOneChecked(questionId, currentRadio) {
+    var radios = document.getElementsByName(questionId);
+    radios.forEach(function(radio) {
+        if (radio !== currentRadio) {
+            radio.disabled = currentRadio.checked;
+        }
+    });
+}
+</script>
+    
 </head>
 <body>
 
